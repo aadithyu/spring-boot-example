@@ -2,7 +2,7 @@ name: CICD
 
 on:
   push:
-      branch:[master]
+      branch:[deploy-to-ec2]
 jobs:
     build:
       runs-on: [ubuntu:latest]
