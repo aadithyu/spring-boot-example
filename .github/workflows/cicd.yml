@@ -1,7 +1,6 @@
 name: CICD
 
-on:
-  push:
+on: push:
       branch:[deploy-to-ec2]
 jobs:
     build:
