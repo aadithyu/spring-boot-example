@@ -8,8 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-      env:
-        FORCE_JAVASCRIPT_ACTIONS_TO_NODE20=true
 
     steps:
       - name: Checkout code
@@ -35,8 +33,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: aws-ec2
-    env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE20=true 
+    runs-on: aws-ec2 
 
     steps:
       - name: Checkout code
