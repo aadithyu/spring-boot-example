@@ -16,7 +16,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '11'
           distribution: 'adopt'
 
       - name: Build with Maven
@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Pull Docker image
         run: docker pull ${{ secrets.DOCKER_USERNAME }}/springboot-example
